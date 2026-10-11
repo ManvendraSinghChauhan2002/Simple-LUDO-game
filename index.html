@@ -11,6 +11,9 @@
             box-sizing: border-box;
         }
 
+        body{
+            padding: 55px;
+        }
         .dice_container{
             background-color:antiquewhite;
             height: 400px;
@@ -61,9 +64,107 @@
             width: 15px;
             border-radius: 50%;
         }
+        .container{
+            margin-left: 300px;
+            height: 600px;
+            width: 600px;
+            border: 2px solid saddlebrown;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,1fr);
+            gap: 100px;
+        }
+
+        .yellow-square{
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+         .green-square{
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+         .blue-square{
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+         .red-square{
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white_square{
+            background-color: white;
+            width: 150px;
+            height: 150px;
+        }
+
+      .white_square{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+              grid-template-rows: repeat(2,1fr);
+              justify-items: center;
+              align-items: center;
+        }
+
+        .pawns{
+            background-color: black;
+            height: 30px ;
+            width:30px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        .pawn_dot{
+            height: 10px;
+            width: 10px;
+            background-color: white;
+             border-radius: 50%;
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="yellow-square">
+            <div class="white_square">
+                <div class="pawns">
+                    <div class="pawn_dot"></div>
+                </div>
+                <div class="pawns">
+                     <div class="pawn_dot"></div>
+                </div>
+                <div class="pawns">
+                     <div class="pawn_dot"></div>
+                </div>
+                <div class="pawns">
+                     <div class="pawn_dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="green-square">
+                <div class="white_square"></div>
+        </div>
+
+        <div class="blue-square">
+                <div class="white_square"></div>
+        </div>
+
+        <div class="red-square">
+                <div class="white_square"></div>
+        </div>
+    </div>
     <div class="dice_container">
         <div class="dice"></div>
         <button id="Roll_Dice">Roll Dice</button>
