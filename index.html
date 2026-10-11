@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .dice_container{
+            background-color:antiquewhite;
+            height: 400px;
+            width: 300px;
+            
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .dice{
+            background-color: white;
+            height: 150px;
+            width: 150px;
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          grid-template-rows: repeat(2,1fr);
+            border-radius: 18px;
+            padding: 10px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        #Roll_Dice{
+            background-color: aliceblue;
+            padding: 15px;
+            font-size: 18px;
+             border-radius: 18px;
+             
+        }
+
+        #result{
+           
+            color: darkred;
+          
+            font-size: 28px;
+            
+        }
+
+        .dot{
+            background-color: black;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="dice_container">
+        <div class="dice"></div>
+        <button id="Roll_Dice">Roll Dice</button>
+        <div id="result">Result:</div>
+    </div>
+   
+    <script>
+        const diceVar=document.querySelector(".dice");
+        const RolldiceVar=document.querySelector("#Roll_Dice");
+
+        let resultVar=document.querySelector("#result"); result
+
+        function getRandomInt(min, max) {
+            
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+        RolldiceVar.addEventListener("click",()=>{
+            
+            const number= getRandomInt(1, 6);
+           
+            resultVar.innerHTML=`Result: ${number}`;
+          
+           
+            console.log(number);
+            for(let i=1;i<=number;i++){
+                if(i===1){
+                    diceVar.innerHTML=`<div class="dot"></div>`;
+                }
+                   else if(i===2){
+                    diceVar.innerHTML=`<div class="dot"></div> <div class="dot"></div>`;
+                }
+                else if(i===3){
+                    diceVar.innerHTML=`<div class="dot"></div> <div class="dot"></div> <div class="dot"></div>`;
+                }
+                 else if(i===4){
+                    diceVar.innerHTML=`<div class="dot"></div> <div class="dot"></div> <div class="dot"></div> <div class="dot"></div>`;
+                }
+                 else if(i===5){
+                    diceVar.innerHTML=`<div class="dot"></div> <div class="dot"></div> <div class="dot"></div> <div class="dot"></div> <div class="dot"></div>`;
+                }
+                  else if(i===6){
+                    diceVar.innerHTML=`<div class="dot"></div> <div class="dot"></div> <div class="dot"></div> <div class="dot"></div> <div class="dot"></div> <div class="dot"></div>`;
+                }
+            }
+        })
+
+       
+    </script>
+</body>
+</html>
