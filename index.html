@@ -68,11 +68,12 @@
             margin-left: 300px;
             height: 600px;
             width: 600px;
-            border: 2px solid saddlebrown;
+           border: 5px solid black;
             display: grid;
             grid-template-columns: repeat(2,1fr);
             grid-template-rows: repeat(2,1fr);
             gap: 100px;
+            position: relative;
         }
 
         .yellow-square{
@@ -107,6 +108,7 @@
             background-color: white;
             width: 150px;
             height: 150px;
+            border: 5px solid black;
         }
 
       .white_square{
@@ -162,6 +164,72 @@
             background-color: black;
              border-radius: 50%;
         }
+        .triangle_container{
+             position: absolute;
+           top: 50%;
+            left: 50%;
+           transform: translate(-50px,-50px);
+             
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+              grid-template-rows: repeat(2,1fr); 
+            color: white;
+            font-size: 8px;
+        }
+        .triangle_green{
+            height: 0;
+            width: 0;
+             border-top: 25px solid green ;
+          border-right: 25px solid red ;
+             border-bottom: 25px solid red ;
+           border-left: 25px solid green;
+           
+        }
+
+         .triangle_yellow{
+            height: 0;
+            width: 0;
+           border-top: 25px solid green ;
+          border-right: 25px solid green ;
+             border-bottom: 25px solid yellow ;
+           border-left: 25px solid yellow;
+           
+        }
+
+         .triangle_blue{
+            height: 0;
+            width: 0;
+          border-top: 25px solid yellow ;
+          border-right: 25px solid blue ;
+             border-bottom: 25px solid blue ;
+           border-left: 25px solid yellow;
+        }
+
+         .triangle_red{
+            height: 0;
+            width: 0;
+        border-top: 25px solid red ;
+          border-right: 25px solid red ;
+             border-bottom: 25px solid blue ;
+           border-left: 25px solid blue;
+        }
+
+        .triangle_yellow_home{
+          /* position: absolute;
+          top: 12px;
+          left: 35px;
+             */
+        }
+
+        .triangle_green_home{
+          position: absolute;
+          top: 12px;
+          left: 35px;
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body>
@@ -199,6 +267,25 @@
                 </div>
                 </div>
         </div>
+
+        <div class="triangle_container">
+         
+             <div class="triangle_yellow">
+                <!-- <h3 class="triangle_yellow_home">HOME</h3> -->
+             </div>
+                 <div class="triangle_green">
+                       <!-- <h3 class="triangle_green_home">HOME</h3> -->
+                 </div>
+                  <div class="triangle_blue">
+                       <!-- <h3 class="triangle_blue_home">HOME</h3> -->
+                  </div>
+                   <div class="triangle_red">
+                       <!-- <h3 class="triangle_red_home">HOME</h3> -->
+                   </div>
+                 
+             
+        </div>
+          
 
         <div class="blue-square">
                 <div class="white_square">
@@ -239,7 +326,8 @@
         <button id="Roll_Dice">Roll Dice</button>
         <div id="result">Result:</div>
     </div>
-   
+
+
     <script>
         const diceVar=document.querySelector(".dice");
         const RolldiceVar=document.querySelector("#Roll_Dice");
